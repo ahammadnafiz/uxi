@@ -1,3 +1,5 @@
+<img src="media/banner.svg" alt="uxi: a UX research and UI design skill for Claude Code. Its five-rung audit ladder: Access, Orientation, Task completion, Coherence, Honesty." width="100%">
+
 # uxi
 
 A UX research and UI design skill for Claude Code. It gives the model a working procedure for designing interfaces and for checking whether they actually work, plus five plain-Python tools that measure instead of squint.
