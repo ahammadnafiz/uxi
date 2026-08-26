@@ -1,0 +1,14 @@
+{
+  "name": "uxi",
+  "owner": {
+    "name": "Ahammad Nafiz",
+    "url": "https://github.com/ahammadnafiz"
+  },
+  "plugins": [
+    {
+      "name": "uxi",
+      "source": "./",
+      "description": "UX research and UI design skill: surface-class-aware heuristic audits, WCAG 2.2 checks, visual craft, research method selection, deceptive-pattern screening, and five runnable lint and stats tools."
+    }
+  ]
+}

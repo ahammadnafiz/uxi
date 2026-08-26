@@ -1,0 +1,84 @@
+{
+  "_comment": "A realistic first draft: the shape someone actually produces before running validate. Every defect here is one the validator must catch by name. Used by the scripts-loop eval; the fixed version is assets/example-findings.json.",
+  "scope": "checkout",
+  "method": "heuristic review",
+  "findings": [
+    {
+      "title": "Delivery cost is hidden until the last step",
+      "rung": 5,
+      "severity": "critical",
+      "where": "step 4",
+      "evidence": "Costs revealed late in a flow is a floor violation, and the running total never appears before the final screen"
+    },
+    {
+      "title": "Marketing consent ships pre-checked",
+      "rung": 5,
+      "severity": "blocker",
+      "where": "step 3, contact details",
+      "evidence": "checkbox defaults to checked"
+    },
+    {
+      "title": "Payment failure wipes the form",
+      "rung": 3,
+      "severity": "serious",
+      "where": "step 4",
+      "evidence": "bad"
+    },
+    {
+      "title": "Promo field has no label",
+      "rung": 1,
+      "severity": "minor",
+      "where": "step 3",
+      "evidence": "a11y_lint reports the input is labeled only by its placeholder, which vanishes on focus"
+    },
+    {
+      "title": "Remove buttons have no accessible name",
+      "rung": 7,
+      "severity": "minor",
+      "where": "order summary",
+      "evidence": "a11y_lint reports two icon-only buttons whose img carries no alt text"
+    },
+    {
+      "title": "Field spacing is off the scale",
+      "rung": 4,
+      "severity": "minor",
+      "where": "form fields",
+      "evidence": "craft_lint reports 13px margin-bottom where the scale is 4px based"
+    },
+    {
+      "title": "Three type families in one stylesheet",
+      "rung": 4,
+      "severity": "minor",
+      "where": "stylesheet",
+      "evidence": "craft_lint counts Inter, Söhne Breit, and SF Mono against a ceiling of two"
+    },
+    {
+      "title": "Radii are not on a scale",
+      "rung": 4,
+      "severity": "minor",
+      "where": "stylesheet",
+      "evidence": "craft_lint counts eight distinct border-radius values across the file"
+    },
+    {
+      "title": "Toast animation runs long",
+      "rung": 4,
+      "severity": "minor",
+      "where": "toast component",
+      "evidence": "craft_lint reports an 800ms entrance where the set tops out at 500ms"
+    },
+    {
+      "title": "Step counter fails contrast",
+      "rung": 1,
+      "severity": "minor",
+      "where": "header",
+      "evidence": "contrast_check puts #9aa3af on #ffffff at 2.55:1 against a 4.5:1 requirement"
+    },
+    {
+      "title": "Ghost button border is invisible",
+      "rung": 1,
+      "severity": "minor",
+      "where": "promo apply button",
+      "evidence": "contrast_check puts the #e4e7ec border at 1.24:1 against a 3:1 UI requirement"
+    }
+  ]
+}

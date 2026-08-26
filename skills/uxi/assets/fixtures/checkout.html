@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Checkout — Step 3 of 4</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+  <header class="bar">
+    <a href="/" class="logo"><img src="/logo.svg" alt="Northbay Supply"></a>
+    <span class="step">Step 3 of 4</span>
+  </header>
+
+  <main class="shell">
+    <h1>Contact and delivery</h1>
+
+    <form class="form" method="post" action="/checkout/step4">
+      <div class="field">
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+        <p class="hint">Order confirmation goes here.</p>
+      </div>
+
+      <div class="field">
+        <label for="postcode">Postcode</label>
+        <input id="postcode" name="postcode" type="text" autocomplete="postal-code" required>
+      </div>
+
+      <div class="field">
+        <label for="addr">Street address</label>
+        <input id="addr" name="addr" type="text" autocomplete="street-address" required>
+      </div>
+
+      <h3>Delivery speed</h3>
+
+      <div class="radios">
+        <label for="std"><input id="std" name="speed" type="radio" value="std" checked> Standard</label>
+        <label for="exp"><input id="exp" name="speed" type="radio" value="exp"> Express</label>
+      </div>
+      <p class="hint">Delivery cost is calculated at the final step.</p>
+
+      <div class="promo">
+        <input type="text" name="promo" placeholder="Promo code">
+        <div class="btn btn-ghost" onclick="applyPromo()">Apply</div>
+      </div>
+
+      <div class="consent">
+        <label for="marketing">
+          <input id="marketing" name="marketing" type="checkbox" checked>
+          Send me offers, product news, and partner promotions
+        </label>
+      </div>
+
+      <p class="error" role="alert">Error 422</p>
+
+      <div class="actions">
+        <div class="btn btn-secondary" role="button">Back</div>
+        <button class="btn btn-primary" type="submit">Continue</button>
+      </div>
+
+      <p class="terms">
+        By continuing you accept our
+        <a href="/terms" target="_blank">terms of sale</a>.
+      </p>
+    </form>
+
+    <aside class="summary">
+      <h3>Your order</h3>
+      <ul class="lines">
+        <li>
+          <span>Ridge jacket, M</span>
+          <span>£148.00</span>
+          <button class="icon-btn" onclick="removeLine(1)">
+            <img src="/x.svg">
+          </button>
+        </li>
+        <li>
+          <span>Trail sock, 2 pack</span>
+          <span>£18.00</span>
+          <button class="icon-btn" onclick="removeLine(2)">
+            <img src="/x.svg">
+          </button>
+        </li>
+      </ul>
+      <p class="total"><span>Subtotal</span> <span>£166.00</span></p>
+      <p class="muted">Delivery and taxes calculated at checkout.</p>
+      <p class="pay">
+        <img src="/visa.svg">
+        <img src="/mc.svg">
+        <img src="/amex.svg">
+      </p>
+    </aside>
+  </main>
+</body>
+</html>

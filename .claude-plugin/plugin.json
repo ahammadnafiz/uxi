@@ -1,0 +1,13 @@
+{
+  "name": "uxi",
+  "version": "1.0.0",
+  "description": "UX research and UI design skill: surface-class-aware heuristic audits, WCAG 2.2 checks, visual craft, research method selection, deceptive-pattern screening, and five runnable lint and stats tools.",
+  "author": {
+    "name": "Ahammad Nafiz",
+    "url": "https://github.com/ahammadnafiz"
+  },
+  "homepage": "https://github.com/ahammadnafiz/uxi",
+  "repository": "https://github.com/ahammadnafiz/uxi",
+  "license": "MIT",
+  "keywords": ["ux", "ui", "design", "accessibility", "wcag", "usability", "research", "design-systems", "skill"]
+}

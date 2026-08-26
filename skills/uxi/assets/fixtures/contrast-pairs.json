@@ -1,0 +1,11 @@
+[
+  {"name": "body text on surface",        "fg": "#16181d", "bg": "#ffffff", "use": "text"},
+  {"name": "muted text on surface",       "fg": "#5b6472", "bg": "#ffffff", "use": "text"},
+  {"name": "step counter on surface",     "fg": "#9aa3af", "bg": "#ffffff", "use": "text"},
+  {"name": "hint text on summary card",   "fg": "#9aa3af", "bg": "#fbfcfd", "use": "text"},
+  {"name": "primary button label",        "fg": "#ffffff", "bg": "#2563eb", "use": "text"},
+  {"name": "error text on surface",       "fg": "#b42318", "bg": "#ffffff", "use": "text"},
+  {"name": "ghost button border",         "fg": "#e4e7ec", "bg": "#ffffff", "use": "ui"},
+  {"name": "focus ring on surface",       "fg": "#2563eb", "bg": "#ffffff", "use": "ui"},
+  {"name": "order total, 18px",           "fg": "#16181d", "bg": "#fbfcfd", "use": "large-text"}
+]

@@ -1,0 +1,52 @@
+{
+  "scope": "guest checkout flow, mobile Safari, 2026-08-26",
+  "surface_class": "transaction",
+  "method": "heuristic review plus 5 observed sessions",
+  "headline_fix": "Estimate and show total cost including shipping from step 1",
+  "working_well": [
+    "Cart persists across sessions and devices",
+    "Card field switches to the numeric keyboard and accepts spaced input"
+  ],
+  "could_not_assess": [
+    "Screen reader pass on iOS; scheduled separately"
+  ],
+  "findings": [
+    {
+      "title": "Shipping cost appears only at the final step",
+      "rung": 5,
+      "severity": "blocker",
+      "where": "checkout step 4, order summary",
+      "evidence": "3 of 5 observed sessions abandoned at step 4 within seconds of the total updating; two participants said the price changed on them",
+      "impact": "abandonment, refund pressure, and a hidden-costs pattern with regulatory exposure",
+      "fix": "estimate shipping from postcode on step 1 and keep a running total visible on every step",
+      "effort": "medium"
+    },
+    {
+      "title": "Marketing consent is pre-checked",
+      "rung": 5,
+      "severity": "blocker",
+      "where": "step 3, contact details",
+      "evidence": "checkbox defaults to checked; under GDPR Article 7 this is not valid consent",
+      "impact": "invalid consent records for every EU order placed through this flow",
+      "fix": "default unchecked, one plain sentence on what the person gets",
+      "effort": "small"
+    },
+    {
+      "title": "Server errors clear the entered card details",
+      "rung": 3,
+      "severity": "serious",
+      "where": "step 4, on any 4xx/5xx from the payment provider",
+      "evidence": "reproduced twice: a declined card returns 'Error 422' and empties every field on the step",
+      "impact": "re-entry burden at the highest-stakes moment; observed one rage-refresh",
+      "fix": "preserve all entered values, name the cause in plain words, keep focus on the failing field",
+      "effort": "medium"
+    },
+    {
+      "title": "Card container padding is off the spacing scale",
+      "rung": 4,
+      "severity": "minor",
+      "where": "order summary cards",
+      "evidence": "13px padding where the stylesheet's scale is 4px based; craft_lint flags it in 6 rules"
+    }
+  ]
+}
