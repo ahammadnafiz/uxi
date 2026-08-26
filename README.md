@@ -1,11 +1,13 @@
 <img src="media/banner.svg" alt="uxi: a UX research and UI design skill for Claude Code. Its five-rung audit ladder: Access, Orientation, Task completion, Coherence, Honesty." width="100%">
 
 
-A UX research and UI design skill for Claude Code. It gives the model a working procedure for designing interfaces and for checking whether they actually work, plus five plain-Python tools that measure instead of squint.
+Ask it to put a countdown timer on your pricing page and it will say no, then show you what to build instead.
+
+That is the part I care about most. uxi is a UX research and UI design skill for Claude Code, and it carries a floor: a short list of deceptive patterns that do not ship regardless of the projected conversion lift. The evals test that the skill holds that line under pressure, including when the prompt says legal signed off and the CEO wants it Friday. Point an optimizer at conversion alone and it will find manipulation by itself, without anyone ever sitting down to design the dark pattern. The floor is the guardrail against that.
+
+The rest of it is a working procedure for designing interfaces and for checking whether they actually work, plus five plain-Python tools that measure instead of squint.
 
 Most design guidance fails in one of two ways when an AI applies it. Either it gets applied everywhere the same, so a dense ops dashboard "fails" the same heuristics a landing page would, or it collapses into taste, where everything is a vibe and nothing is checkable. This skill is built against both. Every screen gets classified first (a checkout is not a radiology dashboard, and the rules that apply to one produce nonsense on the other), findings get reported bottom-up on a five-rung ladder so a broken keyboard path can never hide behind polish notes, and anything that exists as a file gets run through a linter rather than eyeballed.
-
-It also has a floor: a short list of deceptive patterns that do not ship regardless of the projected conversion lift. The evals test that the skill holds that line under pressure, including when the prompt says legal signed off and the CEO wants it Friday.
 
 ## What is in here
 

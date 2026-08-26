@@ -1,5 +1,6 @@
 {
   "name": "uxi",
+  "description": "Home of uxi, a UX research and UI design skill for Claude Code that audits interfaces, checks WCAG 2.2 conformance, and screens for deceptive patterns.",
   "owner": {
     "name": "Ahammad Nafiz",
     "url": "https://github.com/ahammadnafiz"
@@ -8,7 +9,7 @@
     {
       "name": "uxi",
       "source": "./",
-      "description": "UX research and UI design skill: surface-class-aware heuristic audits, WCAG 2.2 checks, visual craft, research method selection, deceptive-pattern screening, and five runnable lint and stats tools."
+      "description": "Ask it for a fake countdown timer and it says no. A UX and accessibility skill for Claude Code: surface-class-aware audits, WCAG 2.2 checks, deceptive-pattern screening, and five zero-dependency lint and stats tools."
     }
   ]
 }
